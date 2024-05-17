@@ -1,0 +1,416 @@
+:root {
+    --cor-1: #ff8000;
+    --cor0: #f0a352;
+    --cor1: #d29554;
+    --cor2: #ffd19f;
+    --cinza: #1c1c1c;
+    --cinza-claro: rgb(69, 69, 69);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'OCR A Extended';
+    src: url('OCRAExtended.eot');
+    src: url('OCRAExtended.eot?#iefix') format('embedded-opentype'),
+        url('OCRAExtended.woff2') format('woff2'),
+        url('OCRAExtended.woff') format('woff'),
+        url('OCRAExtended.ttf') format('truetype'),
+        url('OCRAExtended.svg#OCRAExtended') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-1 {
+    font-family: OCR A Extended, sans-serif;
+}
+
+.layout {
+    display: grid;
+    /* gap: 4px; */
+    /* grid-template-rows: 20vh max-content 20vh; */
+    grid-template-rows: max-content max-content max-content;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header' 'main' 'footer';
+    height: 100vh;
+}
+
+/* body
+{
+    background-color: black;
+} */
+
+/* LAYOUT */
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/* CABEÇALHO PARTE 1*/
+
+header {
+    background-color: rgb(0, 0, 0);
+}
+
+.cab-part-1 {
+    background-color: var(--cinza);
+    /* padding-bottom: 100px; */
+    background-color: black;
+    box-shadow: 100px 0px 100px black,
+        -100px 0px 100px black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        --animate-delay: 1.4s;
+        width: 30vh;
+        margin-left: 60px;
+        /* padding-bottom: 100px; */
+    }
+
+    .l1 {
+        --animate-delay: 1.6s;
+    }
+
+    .l2 {
+        --animate-delay: 1.8s;
+    }
+
+    .l3 {
+        --animate-delay: 1.9s;
+    }
+
+    .l4 {
+        --animate-delay: 2s;
+    }
+
+    .l5 {
+        --animate-delay: 2.1s;
+    }
+
+    ul {
+        margin-right: 20px;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 0 3vw;
+        list-style: none;
+        font-size: 1.3vw;
+        transition: .1s;
+    }
+
+    ul li:hover {
+        color: var(--cor2);
+        text-shadow: 0 0 10px var(--cor2);
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+    ul button {
+        margin: 0 60px;
+        width: 10vw;
+        height: 7vh;
+        font-size: 1.3vw;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    ul button:hover {
+        color: white;
+        font-weight: bold;
+        background-color: var(--cor1);
+        box-shadow: 0 0 30px var(--cor1);
+        border: 1px solid var(--cor1);
+        transform: scale(1.1);
+    }
+}
+
+/* CABECALHO PARTE 2 */
+
+.cab-part-2 {
+
+    /* transform: translateY(-60px); */
+    /* background-color: black; */
+    padding-bottom: 15vh;
+    background: linear-gradient(0deg, var(--cinza) 0%, rgba(0, 0, 0, 1) 80%);
+    background-color: var(--cinza);
+
+    .imagem-fundo img {
+        width: 100%;
+    }
+}
+
+.imagem-fundo {
+    --animate-duration: .6s;
+    background-color: black;
+    box-shadow: 0 30px 50px black,
+        100px 0px 50px black,
+        -100px 0px 50px black;
+    position: relative;
+
+    button {
+        width: 10vw;
+        height: 7vh;
+        position: absolute;
+        bottom: 12vh;
+        left: 10vw;
+        background-color: transparent;
+        border: 3px solid #ffffff;
+        border-radius: 20px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 2.6vh;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .texto-img {
+        width: max-content;
+        height: 35vh;
+        /* border: 1px solid white; */
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        font-family: Roboto, sans-serif;
+        font-weight: 200;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 5vw;
+        /* font-size: clamp(100px,4vw, 32px); */
+        text-align: left;
+
+        span {
+            color: var(--cor0);
+            font-weight: 500;
+        }
+    }
+
+}
+
+header,
+.imagem-fundo,
+.imagem-fundo img {
+    border-radius: 0 0 100px 100px;
+}
+
+/* MAIN */
+
+.part-1 {
+    background-color: var(--cinza);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    /* row-gap: 10rem; */
+
+    .titulo {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        /* row-gap: 5vh; */
+        text-align: center;
+        font-family: Alef, sans-serif;
+        font-size: 1.5vw;
+        color: white;
+        animation: appear ease-in-out;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+
+        h1 {
+            font-weight: 200;
+        }
+
+        span {
+            color: var(--cor-1);
+        }
+
+        p {
+            font-family: Roboto, sans-serif;
+            font-weight: 300;
+            font-size: 1.5vw;
+            margin: 0 13%;
+        }
+    }
+
+    p {
+        /* width: 100vw; */
+        /* width: 70%; */
+        padding: 0 200px;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 1.4vw;
+    }
+}
+
+/* Carrossel */
+
+/* .card:nth-child(*){
+    background-image: linear-gradient(
+        to bottom, var(--cor2), var(--cor1)
+    );
+} */
+
+.container-carrossel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    .botao-carrossel button {
+        background-color: transparent;
+        border: none;
+        font-size: 5vh;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        cursor: pointer;
+        padding: 0 40px;
+        color: white;
+    }
+
+}
+
+.vermais-card {
+    margin: 2vh 15vw;
+    display: flex;
+    justify-content: end;
+
+    a button {
+        width: 10vw;
+        height: 5vh;
+        border-radius: 10px;
+        background-color: transparent;
+        border: 1px solid var(--cor-1);
+        color: #ff8000;
+        transition: .2s;
+    }
+
+    a button:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.carrossel {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 3vh;
+    max-width: 70vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    /* animation: appear ease;
+    animation-range: cover 0% cover 10%; */
+}
+
+.card {
+    /* min-width: 14rem;
+    max-height: 14rem; */
+    min-width: 15vw;
+    padding: 20px;
+    background-color: var(--cinza-claro);
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    height: 35vh;
+    color: white;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.2s;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    scroll-snap-align: start;
+
+    .foto-card {
+        padding-top: 20px;
+
+        img {
+            width: 7vh;
+            padding-bottom: 2vh;
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+    }
+
+    .lista-card {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-weight: 100;
+        align-items: start;
+    }
+
+    ul {
+        list-style: none;
+        text-align: start;
+    }
+
+    .acessar-card {
+        color: var(--cor-1);
+        align-self: flex-end;
+    }
+
+}
+
+.card h4 {
+    align-items: flex-end;
+    /* border: 1px solid white; */
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.carrossel::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.carrossel::-webkit-scrollbar-track {
+    background-color: rgb(73, 73, 73);
+    border-radius: 40rem;
+    /* visibility: hidden; */
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: rgb(113, 113, 113);
+    border-radius: 40rem;
+    /* visibility: hidden; */
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        translate: 0 70%;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
