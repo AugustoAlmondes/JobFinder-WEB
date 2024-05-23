@@ -12,20 +12,8 @@
     margin: 0;
 }
 
-@font-face {
-    font-family: 'OCR A Extended';
-    src: url('OCRAExtended.eot');
-    src: url('OCRAExtended.eot?#iefix') format('embedded-opentype'),
-        url('OCRAExtended.woff2') format('woff2'),
-        url('OCRAExtended.woff') format('woff'),
-        url('OCRAExtended.ttf') format('truetype'),
-        url('OCRAExtended.svg#OCRAExtended') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .font-1 {
-    font-family: OCR A Extended, sans-serif;
+    font-family: Roboto Mono, sans-serif;
 }
 
 .layout {
@@ -407,7 +395,7 @@ header,
 @keyframes appear {
     from {
         opacity: 0;
-        translate: 0 30%;
+        translate: 0 70%;
     }
 
     to {
