@@ -1,4 +1,5 @@
 :root {
+    --cor-2: #9d5b16;
     --cor-1: #ff8000;
     --cor0: #f0a352;
     --cor1: #d29554;
@@ -167,7 +168,7 @@ header {
         border-radius: 20px;
         color: #ffffff;
         font-weight: bold;
-        font-size: 2.6vh;
+        font-size: 1vw;
         cursor: pointer;
         transition: .2s;
     }
@@ -285,6 +286,7 @@ header,
     margin: 2vh 15vw;
     display: flex;
     justify-content: end;
+    font-size: 2vh;
 
     a button {
         width: 10vw;
@@ -315,13 +317,13 @@ header,
 }
 
 .card {
-    /* min-width: 14rem;
-    max-height: 14rem; */
+    /* min-width: 14rem; */
+    /* max-height: calc(100% 10%); */
     min-width: 15vw;
     padding: 20px;
     background-color: var(--cinza-claro);
     box-shadow: 10px 10px 20px rgb(0, 0, 0);
-    height: 35vh;
+    height: 36vh;
     color: white;
     display: flex;
     font-weight: 600;
@@ -360,7 +362,15 @@ header,
         text-align: start;
     }
 
+    ul li{
+        font-weight: 300;
+        font-size: 1vw;
+    }
+
     .acessar-card {
+        font-size: 2vh;
+        padding-bottom: 20px;
+        margin: 0;
         color: var(--cor-1);
         align-self: flex-end;
     }
@@ -395,7 +405,7 @@ header,
 @keyframes appear {
     from {
         opacity: 0;
-        translate: 0 70%;
+        translate: 0 30%;
     }
 
     to {
@@ -490,6 +500,7 @@ header,
             margin-top: 2vh;
             justify-content: center;
             column-gap: 5vw;
+
             button {
                 height: 7vh;
                 width: 15vw;
@@ -513,19 +524,19 @@ header,
                 transition: .2s;
             }
 
-            .olhar-Vagas:hover{
+            .olhar-Vagas:hover {
                 cursor: pointer;
                 transform: scale(1.05);
                 background-color: var(--cor0);
-                color:white;
+                color: rgb(94, 40, 13);
                 box-shadow: 0 0 20px var(--cor0);
             }
 
-            .registar-se:hover{
+            .registar-se:hover {
                 cursor: pointer;
                 transform: scale(1.05);
                 background-color: var(--cor2);
-                color:white;
+                color: rgb(94, 40, 13);
                 box-shadow: 0 0 20px var(--cor2);
             }
         }
